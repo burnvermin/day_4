@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="head">
+        <img src="images/bg-pattern.svg" alt="background" id="bg-img">
+        <img src="images/pattern-circles.svg" alt="circles" id="circle-img">
+
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+
+    <div class="container">
+        <div class="slide">
+            <p id="pg"><span id="pgviews"> </span> PAGEVIEWS</p>
+            <input type="range" min="8.00" max="36.00"  class="slider" id="myRange">
+            <p id="cash">$<span id="price"> .00</span> <span id="per"> /month</span></p>
+        </div>
+        <div class="billing">
+
+            <p id="mb">Monthly Billing</p>
+            <label class="switch">
+                <input type="checkbox" >
+                <span class="slider round"></span>
+              </label>
+            <p id="yb">Yearly Billing</p>
+            <button id="btn"><span id="btntxt"></span></button>
+
+        </div>
+
+        <hr>
+
+        <div class="benefits">
+            <div class="benp">
+            <p><img src="images/icon-check.svg" alt="check"> Unlimited websites</p>
+            <p><img src="images/icon-check.svg" alt="check"> 100% data owenership</p>
+            <p><img src="images/icon-check.svg" alt="check"> Email reports</p>
+        </div>
+            <button>Start my trial</button>
+        </div>
+    </div>
+    <br/>
+<script src="JavaScript/Script.js"></script>
+</body>
+</html>

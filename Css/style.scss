@@ -1,0 +1,329 @@
+$desktop: 435px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+body, html {
+height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family:  'Manrope', sans-serif;
+
+    p {
+        color: rgb(122, 122, 122);
+        font-size: 16px;
+    }
+
+    .head {
+        
+        overflow-x: hidden;
+
+        @include desktop {
+            overflow: hidden;
+        }
+
+        #bg-img {
+            position: absolute;
+            z-index: -1;
+
+            @include desktop {
+                margin-top: 0%;
+                height: 35em;
+                position: fixed;
+
+            }
+        }
+
+        #circle-img {
+            padding: 1em;
+            width: auto;
+            margin: 10% 25% auto ;
+            position: absolute;
+            z-index: -1;
+
+            @include desktop{
+                width: 15%;
+                margin-left: 42%;
+                margin-top: 6%;
+            }
+        }
+    }
+}
+
+.head {
+
+    h1{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 21px;
+        margin-top: 4em;
+
+        @include desktop {
+            margin-top: 0em;
+            padding-top: 4em;
+            padding-left: 4em;
+            padding-bottom: 4em;
+            padding-right: 0em;
+            font-size: 40px;
+            position: absolute;
+        }
+    }
+    p{
+        width: 55%;
+        margin: auto;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 1em;
+
+        @include desktop{
+            font-size: 22px;
+            margin: 16% 24%;
+            position: absolute;
+            
+        }
+    }
+}
+
+.container {
+    width: 70%;
+    margin: 20% auto 40% auto;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 5px 15px #e4e4e4  ;
+    padding: 2em;
+
+    @include desktop {
+        margin-top: 25%;
+        width: 40%;
+        margin-left:auto ;
+        margin-right:auto ;
+    }
+
+    .slide {
+
+        @include desktop {
+        }
+
+        #pg {
+
+            @include desktop {
+                text-align: left;
+                margin-left: 10%;
+            }
+        }
+        
+        p {
+            text-align: center;
+        }
+        #myRange {
+            margin: 10% auto;
+            width: 100%;
+            height: 1em;
+            background-image: url(../images/icon-slider.svg);
+        }
+        #cash {
+            color: black;
+            font-size: 55px;
+            margin: 0;
+
+            @include desktop {
+                text-align: right;
+                margin-top: -35%;
+            }
+            #per {
+                color: rgb(122, 122, 122);
+                font-size: 16px;
+            }
+        }
+    }
+
+    .billing {
+        display: flex;
+        
+        @include desktop {
+            margin-top: 18%;
+            margin-left: 25%;
+        }
+        p {
+            font-size: 14px;
+            flex: auto;  
+
+            @include desktop {
+                margin-top: 8%;                
+                width: 10%;
+            }         
+            
+        }
+        #mb {
+            @include desktop {
+                margin-right: 22%;
+            }
+        }
+        #yb {
+            @include desktop {
+                margin-left: -33%;
+            }
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            margin-top: 6%;
+            margin-left: 3%;
+            margin-right: 3%;
+            flex: auto;
+            @include desktop {
+                width: 60px;
+                position: absolute;
+                height: 25px;
+                margin-left: 8%;
+                margin-right: 0;
+                margin-top: 2.3%;
+            }
+        }
+          
+          .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+          
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+          
+          .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 4px;
+            bottom: 2.5px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            flex: auto;
+            @include desktop {
+                bottom: 4px;
+                height: 18px;
+            }
+        }
+          
+          input:checked + .slider {
+            background-color: #2196F3;
+        }
+          
+          input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+          
+          input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(18px);
+            flex: auto;
+            @include desktop {                
+                transform: translateX(35px);
+            }
+        }
+          
+          /* Rounded sliders */
+          .slider.round {
+            border-radius: 34px;
+        }
+          
+          .slider.round:before {
+            border-radius: 50%;
+        }
+
+        button{
+            border: none;
+            background-color: hsl(14, 92%, 95%);
+            color: hsl(15, 100%, 70%);
+            padding-top: 3px;
+            padding-bottom: 17px;
+            height: .8em;
+            margin-top: 6%;
+            margin-right: -10%;
+            flex: auto;
+            border-radius: 90px;
+            
+            @include desktop {
+                width: 8%;
+                position: absolute;
+                margin-top: 2.5%;
+                margin-left: 20%;
+            }
+
+            span:after {
+                content: "-25%";
+                
+                @include desktop {
+                    content: "25% Discount";
+                }
+            }
+        }
+
+    }
+
+    hr {
+        margin: 15% auto;
+
+        @include desktop {
+            margin-top: 10%;
+            opacity: .6;
+        }
+    }
+    .benefits {
+        text-align: center;
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: auto auto;
+            text-align: left;
+        }
+        p {
+            img {
+                margin-right: 3%;
+
+                @include desktop {
+                    margin-right: 0%;
+                }
+
+            }
+            
+            
+        }
+        button {
+            padding: 1em 4em;
+            margin: 1em auto;
+            border: none;
+            border-radius: 90px;
+            background-color: hsl(227, 35%, 25%);
+            color: hsl(225, 20%, 60%);
+            font-weight: bolder;
+
+            @include desktop {
+                height: 4em;
+                margin-top: 15%;
+                color: #fff;
+            }
+        }
+    }
+
+}

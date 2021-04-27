@@ -1,0 +1,367 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+body p {
+  color: #7a7a7a;
+  font-size: 16px;
+}
+
+body .head {
+  overflow-x: hidden;
+}
+
+@media (min-width: 435px) {
+  body .head {
+    overflow: hidden;
+  }
+}
+
+body .head #bg-img {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 435px) {
+  body .head #bg-img {
+    margin-top: 0%;
+    height: 35em;
+    position: fixed;
+  }
+}
+
+body .head #circle-img {
+  padding: 1em;
+  width: auto;
+  margin: 10% 25% auto;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 435px) {
+  body .head #circle-img {
+    width: 15%;
+    margin-left: 42%;
+    margin-top: 6%;
+  }
+}
+
+.head h1 {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 21px;
+  margin-top: 4em;
+}
+
+@media (min-width: 435px) {
+  .head h1 {
+    margin-top: 0em;
+    padding-top: 4em;
+    padding-left: 4em;
+    padding-bottom: 4em;
+    padding-right: 0em;
+    font-size: 40px;
+    position: absolute;
+  }
+}
+
+.head p {
+  width: 55%;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 1em;
+}
+
+@media (min-width: 435px) {
+  .head p {
+    font-size: 22px;
+    margin: 16% 24%;
+    position: absolute;
+  }
+}
+
+.container {
+  width: 70%;
+  margin: 20% auto 40% auto;
+  background-color: #fff;
+  color: black;
+  -webkit-box-shadow: 0 5px 15px #e4e4e4;
+          box-shadow: 0 5px 15px #e4e4e4;
+  padding: 2em;
+}
+
+@media (min-width: 435px) {
+  .container {
+    margin-top: 25%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 435px) {
+  .container .slide #pg {
+    text-align: left;
+    margin-left: 10%;
+  }
+}
+
+.container .slide p {
+  text-align: center;
+}
+
+.container .slide #myRange {
+  margin: 10% auto;
+  width: 100%;
+  height: 1em;
+  background-image: url(../images/icon-slider.svg);
+}
+
+.container .slide #cash {
+  color: black;
+  font-size: 55px;
+  margin: 0;
+}
+
+@media (min-width: 435px) {
+  .container .slide #cash {
+    text-align: right;
+    margin-top: -35%;
+  }
+}
+
+.container .slide #cash #per {
+  color: #7a7a7a;
+  font-size: 16px;
+}
+
+.container .billing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Rounded sliders */
+}
+
+@media (min-width: 435px) {
+  .container .billing {
+    margin-top: 18%;
+    margin-left: 25%;
+  }
+}
+
+.container .billing p {
+  font-size: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+@media (min-width: 435px) {
+  .container .billing p {
+    margin-top: 8%;
+    width: 10%;
+  }
+}
+
+@media (min-width: 435px) {
+  .container .billing #mb {
+    margin-right: 22%;
+  }
+}
+
+@media (min-width: 435px) {
+  .container .billing #yb {
+    margin-left: -33%;
+  }
+}
+
+.container .billing .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-top: 6%;
+  margin-left: 3%;
+  margin-right: 3%;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+@media (min-width: 435px) {
+  .container .billing .switch {
+    width: 60px;
+    position: absolute;
+    height: 25px;
+    margin-left: 8%;
+    margin-right: 0;
+    margin-top: 2.3%;
+  }
+}
+
+.container .billing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.container .billing .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.container .billing .slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 2.5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+@media (min-width: 435px) {
+  .container .billing .slider:before {
+    bottom: 4px;
+    height: 18px;
+  }
+}
+
+.container .billing input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.container .billing input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.container .billing input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(18px);
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+@media (min-width: 435px) {
+  .container .billing input:checked + .slider:before {
+    -webkit-transform: translateX(35px);
+            transform: translateX(35px);
+  }
+}
+
+.container .billing .slider.round {
+  border-radius: 34px;
+}
+
+.container .billing .slider.round:before {
+  border-radius: 50%;
+}
+
+.container .billing button {
+  border: none;
+  background-color: #feece7;
+  color: #ff8c66;
+  padding-top: 3px;
+  padding-bottom: 17px;
+  height: .8em;
+  margin-top: 6%;
+  margin-right: -10%;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  border-radius: 90px;
+}
+
+@media (min-width: 435px) {
+  .container .billing button {
+    width: 8%;
+    position: absolute;
+    margin-top: 2.5%;
+    margin-left: 20%;
+  }
+}
+
+.container .billing button span:after {
+  content: "-25%";
+}
+
+@media (min-width: 435px) {
+  .container .billing button span:after {
+    content: "25% Discount";
+  }
+}
+
+.container hr {
+  margin: 15% auto;
+}
+
+@media (min-width: 435px) {
+  .container hr {
+    margin-top: 10%;
+    opacity: .6;
+  }
+}
+
+.container .benefits {
+  text-align: center;
+}
+
+@media (min-width: 435px) {
+  .container .benefits {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    text-align: left;
+  }
+}
+
+.container .benefits p img {
+  margin-right: 3%;
+}
+
+@media (min-width: 435px) {
+  .container .benefits p img {
+    margin-right: 0%;
+  }
+}
+
+.container .benefits button {
+  padding: 1em 4em;
+  margin: 1em auto;
+  border: none;
+  border-radius: 90px;
+  background-color: #293356;
+  color: #858fad;
+  font-weight: bolder;
+}
+
+@media (min-width: 435px) {
+  .container .benefits button {
+    height: 4em;
+    margin-top: 15%;
+    color: #fff;
+  }
+}
+/*# sourceMappingURL=style.css.map */
